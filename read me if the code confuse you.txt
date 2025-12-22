@@ -1,0 +1,92 @@
+exp1:
+simple code where input used to get string or integer and assigning it to a.printing 'a' .
+
+exp2:
+taking the input from the user.each input is seperated by spaces so that it can recognize individualy. 
+1.user_input.split():-to split each data
+2.[int(item) for item in user_input.split()]:- in order find the minimum and maximum integer .the input needs to be converted so a new variable is                 introduced (item) and 'int' will convert the values.each data that has been split is stored in item as integer and then assigned to my_list.
+3.min and max then used to identify the largest and smallest.
+
+exp3:
+multiplication is easy to make. making loop that ranges from 1 to 11 (why 11? If you want numbers 1 to n, always use:range(1, n + 1))
+print i:is to show which is the multiplyer
+print table:to show the multiplicand
+print i*table :is the multiplication operation
+
+exp4:
+Pascal triangle logic is simple.
+it Starts with 1,and then 1 will be present on both sides throughout the process(ITS MANDATORY FOR THE MATHEMATICAL EQUATION)
+       1
+      1  1
+after the sequence its 1 2 1.So how did we get the 2?.
+        1                   1
+       1 1 --------->      1+1   #The values add up and the placed in the middle
+      1 2 1             1 (1+1) 1
+The sequence will be 1 3 3 1.
+           1
+          1 1      
+         1 2 1
+    1 (1+2) (2+1) 1
+
+Now let's look at the pyramid logic.
+(Check the code while reading)
+The loop is there to determine the size of  the pyramid.
+ print(" "*(n-i), end=" ") Here " "*(n-i) this determines the space for the pyramid.the pyramid needs to be build in a order like
+      1              1
+    1  1             1 1
+   1  1  1           1 1 1
+(Right order)        (Wrong order)
+
+so (n-1) is there to multiply the spaces in order that  the pyramid can be made>
+for example n=5 and i=0 .the spaces will be multiplied by 5.And when the next loop starts it will be 5-1.
+and it goes in order.
+end ="" : i will explain it wih=th simple example
+lets say,
+         print("Hello")
+         print("World")
+The output will be,
+         Hello
+         World
+
+And if we use end here,  
+                       print("Hello", end="")
+                       print("World")
+The output will be,
+                   Hello World -- see the difference
+The end will join 2 printable lines into one instead of 2 seperate lines.
+#if its still confuse you try some changes in the code like removing the end from the code(For better understanding)
+
+Thats it for the triangle logic.now u just need to implement the mathematical equation to the code to get the Pascal values.
+num = num * (i - j) // (j + 1)
+
+
+
+Exp5:
+Take the input from the user
+split it in order
+Take the input data
+append the data to the list using .append(newdata)
+print the updated the list
+
+
+Exp6:Palindrome
+Before doing the code understand the logic Palindrome.Palindrom checks by looking if its the same word or value even after it is reverse.
+Example : mam , madam , radar ,1001
+Take the input from the user and take the lenght of the input using len() function
+intialized a loop that will stop when it covers all the length.
+Here a[i] implies the position. for example
+              m   a    d    a    m
+            a[0] a[1] a[2] a[3] a[4] 
+we are checking if its palindrome or not by a[i]==a[b-i-1] === if i=0 it will be,
+a[0] ==a[5-0-1] which will be four which is equal to a[0]==a[4] m==m
+it will repeat until it reaches the middle.
+i intialized a trigger called c=0 in the loop so that if the c increments.if the c reaches b-1 times that means the input is palindrome.
+o.w it will break
+
+Factorial
+a factorial of a 5 is 1 x 2 x 3 x 4 x 5 that is 120
+so we just need a loop that can do the exact mathematics.
+intialized fact as 1(bcz it never starts with zero)
+and then loop with increment
+
+
