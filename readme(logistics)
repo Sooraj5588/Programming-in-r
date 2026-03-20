@@ -1,0 +1,33 @@
+why use logisitic Regression:
+       Logistic regression is used when the dependent variable is categorical,
+as it models probabilities using the sigmoid function and ensures outputs lie between 0 and 1.
+Basically predict outcome based on true or false
+
+What Logistic Regression Actually Does
+
+👉 Step 1: Calculate a linear combination(it means Multiply inputs by weights and add them up)
+👉 Step 2: Pass it through sigmoid(sigmoid converts any number into value between 0 and 1)
+👉 Step 3: Output probability
+
+code(explanation):
+taking iris Dataset ~ data(iris)
+iris$IsSetosa ~ it means we are creating a new column for species that actually is
+
+ifelse(iris$Species=="setosa",1,0) ~ a filtering process that take only setosa as 1 and everything else 0 to newly created column
+model <- glm(IsSetosa ~ Petal.Length, data=iris, family=binomial) ~ Predict IsSetosa using Petal.Length
+
+glm = generlised linear model(better search it online for further understanding 
+family = binomial ~ basically telling R to take logistic regression
+
+plot(iris$Petal.Length, iris$IsSetosa) ~ X-axis → Petal Length ,Y-axis → IsSetosa (0 or 1)
+curve(predict(model, data.frame(Petal.Length=x), type="response"), add=TRUE) ~
+                              What happens here:
+                                    predict() computes probability from the model
+
+                                    type="response" gives probability values (0–1)
+
+                                    curve() draws the logistic function
+
+                                    add=TRUE overlays it on the existing plot
+                              
+
