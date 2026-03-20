@@ -1,0 +1,6 @@
+data(iris)
+head(iris)
+model<-1m(sepal.length~petal.length,data=iris)
+summary(model)
+plot(iris$petal.length,iris$sepal.length,main="linear Regerssion", xlab="petal length", ylab="sepal length",col="blue")
+abline(model,col="red")
